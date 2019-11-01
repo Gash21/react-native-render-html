@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, Platform } from 'react-native';
-import { WebView } from 'react-native-webview';
 import { _constructStyles, _getElementClassStyles } from './HTMLStyles';
+import { WebView } from 'react-native-webview';
 import HTMLImage from './HTMLImage';
 
 export function a (htmlAttribs, children, convertedCSSStyles, passProps) {
@@ -168,6 +168,6 @@ export function br (htlmAttribs, children, convertedCSSStyles, passProps) {
 
 export function textwrapper (htmlAttribs, children, convertedCSSStyles, { allowFontScaling, key }) {
     return (
-        <Text allowFontScaling={allowFontScaling} key={key} style={convertedCSSStyles}>{ children }</Text>
+        <Text allowFontScaling={allowFontScaling} selectable={true} key={key} style={convertedCSSStyles}>{ children }</Text>
     );
 }
